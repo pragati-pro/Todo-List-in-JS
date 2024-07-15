@@ -19,7 +19,8 @@ const form  = document.querySelector("#form");
 const todoTitleInput = document.querySelector(".todo-title-input");
 form.addEventListener("submit", (e) => {
     e.preventDefault();
-    const todoInput = todoTitleInput.value;
+    let todoInput = todoTitleInput.value;
+    todoInput = todoInput.trim();
     if(todoInput.length) {
         const newTodo = { 
             id: crypto.randomUUID(),
